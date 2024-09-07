@@ -1,0 +1,91 @@
+.benefits {
+
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--main-color);
+  }
+
+  &__item {
+    grid-column: 4 span;
+    align-items: center;
+    padding: 24px;
+    padding-left: 148px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 126px 126px;
+
+    @include big-desktop {
+      grid-column: 5 span;
+    }
+
+    @include tablet {
+      grid-column: 4 span;
+      padding: 0;
+      padding-left: 129px;
+      background-size: 110px 110px;
+    }
+
+    @include small-tablet {
+      grid-column: 2 / 6 span;
+      justify-content: center;
+      padding-left: 129px;
+    }
+
+    @include mobile {
+      grid-column: 2 / 4 span;
+      text-align: center;
+      padding: 12px;
+      padding-top: 120px;
+      background-position: top center;
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 12px;
+    color: var(--black-color);
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__descr {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    color: var(--black-color);
+  }
+
+}
+
+#benefits-board {
+  background-image: url(../img/svg/benefits-board.svg);
+}
+
+#benefits-package {
+  background-image: url(../img/svg/benefits-package.svg);
+}
+
+#benefits-delivery {
+  background-image: url(../img/svg/benefits-delivery.svg);
+}
+
+#benefits-best-support {
+  background-image: url(../img/svg/benefits-best-support.svg);
+}
+
+#benefits-clear-info {
+  background-image: url(../img/svg/benefits-clear-info.svg);
+}
+
+#benefits-garantee {
+  background-image: url(../img/svg/benefits-garantee.svg);
+}

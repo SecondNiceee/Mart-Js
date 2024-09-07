@@ -1,0 +1,227 @@
+.hero {
+  padding-top: 36px;
+
+  @include tablet {
+    padding-top: 24px;
+  }
+}
+
+.hero-left {
+  grid-column: 6 span;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+
+  @include big-desktop {
+    grid-column: 10 span;
+    grid-template-columns: repeat(10, 1fr);
+    margin-bottom: 16px;
+  }
+
+  @include tablet {
+    grid-column: 8 span;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__text {
+    grid-column: 6 span;
+
+    @include big-desktop {
+      grid-column:  5 span;
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+    margin: 0;
+    margin-bottom: 16px;
+
+    @include big-desktop {
+      font-size: 30px;
+    }
+
+    @include tablet {
+      margin-bottom: 12px;
+    }
+
+    @include small-tablet {
+      line-height: 36px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__descr {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 16px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__image {
+    grid-column: 6 span;
+
+    @include big-desktop {
+      grid-column: 6 / 5 span;
+    }
+  }
+}
+
+.hero-right {
+  grid-column: 7 / 6 span;
+  border-radius: 16px;
+  background: var(--light-color);
+
+  @include big-desktop {
+    grid-column: 10 span;
+  }
+
+  @include tablet {
+    grid-column: 8 span;
+  }
+}
+
+.hero-form {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 24px 0;
+
+  @include big-desktop {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__text {
+    grid-column: 2 / 4 span;
+    text-align: center;
+
+    @include big-desktop {
+      grid-column: 3 / 6 span;
+    }
+
+    @include tablet {
+      grid-column: 2 / 6 span;
+    }
+
+    @include mobile {
+      grid-column: 6 span;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  &__form {
+    grid-column: 2 / 4 span;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include big-desktop {
+      grid-column: 3 / 6 span;
+    }
+
+    @include tablet {
+      grid-column: 2 / 6 span;
+    }
+
+    @include small-tablet {
+      padding: 0 30px;
+      grid-column: 8 span;
+    }
+
+    @include mobile {
+      grid-column: 6 span;
+    }
+  }
+
+  &__label-name {
+    grid-column: 2 span;
+  }
+
+  &__btn {
+    grid-column: 2 span;
+  }
+
+  &__label {
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-color: var(--purple-dark-color);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 12px;
+    border: none;
+    color: var(--main-color);
+    transition: color 0.3s ease-in-out;
+
+    &::placeholder {
+      color: var(--gray-light-color);
+      transition: color 0.3s ease-in-out;
+    }
+
+    &:hover::placeholder {
+      color: var(--purple-dark-color);
+    }
+
+    &.focus-visible::placeholder {
+      color: var(--main-color);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
